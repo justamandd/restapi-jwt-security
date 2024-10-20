@@ -25,4 +25,4 @@ A API desenvolvida para a carteira de ganhos e gastos tem como principal objetiv
 - SOLID
 - TDD
 - MySQL
-- Prismic
+- Prisma ORM
