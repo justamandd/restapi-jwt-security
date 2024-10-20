@@ -23,7 +23,7 @@ A API desenvolvida para a carteira de ganhos e gastos tem como principal objetiv
 - Bloqueio de Login por falhas repetitivas
 - Segurança de Sessão (HttpOnly & Secure)
 - SOLID
-- TDD (Jest)
+- Testes (Jest)
 - MySQL
 - Prisma ORM
 
