@@ -35,11 +35,17 @@ model Transaction {
   user        User      @relation(fields: [userId], references: [id])
 }
 
+enum TokenType {
+  ACCESS
+  REFRESH
+}
+
 model Session {
   id         Int      @id @default(autoincrement())
   userId     Int
   token      String   // O JWT
   isValid    Boolean  @default(true)
+  type       TokenType
   createdAt  DateTime @default(now())
   expiresAt  DateTime
   user User @relation(fields: [userId], references: [id])
