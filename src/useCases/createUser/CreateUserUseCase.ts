@@ -1,10 +1,10 @@
-import { IUsersRepository } from "@repositories/IUsersRepository";
+import { IUsersCreateRepository } from "@repositories/IUsersCreateRepository";
 import { CreateUserDTO } from "@useCases/createUser/CreateUserDTO";
 import { BCryptHashProvider } from "@providers/BCryptHashProvider";
 
 export class CreateUserUseCase {
   constructor(
-    private usersRepository: IUsersRepository,
+    private usersRepository: IUsersCreateRepository,
     private hashProvider: BCryptHashProvider
   ) {}
 

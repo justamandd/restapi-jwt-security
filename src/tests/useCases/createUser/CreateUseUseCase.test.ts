@@ -1,9 +1,9 @@
 // src/tests/useCases/createUser/CreateUserUseCase.test.ts
 import { CreateUserUseCase } from "../../../useCases/createUser/CreateUserUseCase";
-import { IUsersRepository } from "../../../repositories/IUsersRepository";
+import { IUsersCreateRepository } from "../../../repositories/IUsersCreateRepository";
 import { BCryptHashProvider } from "../../../infra/providers/BCryptHashProvider";
 
-const mockUsersRepository: IUsersRepository = {
+const mockUsersRepository: IUsersCreateRepository = {
   findByEmail: jest.fn(),
   create: jest.fn(),
 };
