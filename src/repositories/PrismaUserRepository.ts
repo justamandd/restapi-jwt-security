@@ -16,6 +16,10 @@ export class PrismaUserRepository implements IUsersRepository {
   }
 
   async create(data: Omit<User, "id">): Promise<User> {
+    if (!data.name) {
+      throw new Error("Name is required to create a user");
+    }
+
     return prisma.user.create({
       data: {
         name: data.name,
