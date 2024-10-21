@@ -42,6 +42,8 @@
       "@assets/*": ["./src/assets/*"],
       "@tests/*": ["./src/tests/*"],
       "@useCases/*": ["./src/useCases/*"],
+      "@src/*": ["./src/*"],
+      "@root/*": ["./"], 
     },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
