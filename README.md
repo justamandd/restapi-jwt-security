@@ -1,6 +1,6 @@
 # Motivação
 
-O desenvolvimento deste projeto tem como objetivo o aprendizado de novas habilidades, tais como autenticação com JWT, aplicação de conceitos de SOLID e prática de TDD.
+O desenvolvimento deste projeto tem como objetivo o aprendizado de novas habilidades, tais como autenticação com JWT, aplicação de conceitos de SOLID e prática de Testes.
 
 # O Projeto
 
