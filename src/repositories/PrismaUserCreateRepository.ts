@@ -4,7 +4,7 @@ import { IUsersCreateRepository } from '@repositories/IUsersCreateRepository';
 
 const prisma = new PrismaClient();
 
-export class PrismaUserRepository implements IUsersCreateRepository {
+export class PrismaUserCreateRepository implements IUsersCreateRepository {
   async findByEmail(email: string): Promise<User | null> {
     const user = await prisma.user.findUnique({where: {email}});
 

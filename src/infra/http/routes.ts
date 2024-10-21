@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { PrismaUserRepository } from "@repositories/PrismaUserRepository";
+import { PrismaUserCreateRepository } from "@repositories/PrismaUserCreateRepository";
 import { CreateUserUseCase } from "@useCases/createUser/CreateUserUseCase";
 import { CreateUserController } from "@useCases/createUser/CreateUserController";
 import { BCryptHashProvider } from "@providers/BCryptHashProvider";
 
 const routes  = Router();
 
-const usersRepository = new PrismaUserRepository();
+const usersRepository = new PrismaUserCreateRepository();
 const hashProvider = new BCryptHashProvider();
 
 const createUserUseCase = new CreateUserUseCase(usersRepository, hashProvider);
