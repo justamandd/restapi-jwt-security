@@ -1,31 +1,22 @@
 export class User {
   public readonly id?: number;
-  public name: string;
+  public name?: string;
   public email: string;
   public password: string;
   public createdAt?: Date;
   public updatedAt?: Date;
   public isActive?: boolean;
 
-  constructor(props: Omit<User, 'id'>, id?: number, createdAt?: Date, updatedAt?: Date, isActive?: boolean) {
-    this.name = props.name;
+  constructor(props: Omit<User, 'id' | 'createAt' | 'updatedAt' | 'isActive' | 'name'>, 
+    id?: number, 
+    createdAt?: Date, 
+    updatedAt?: Date, 
+    isActive?: boolean, 
+    name?: string
+  ){
     this.email = props.email;
     this.password = props.password;
 
-    if (id) {
-      this.id = id;
-    }
-
-    if (createdAt) {
-      this.createdAt = createdAt;
-    }
-
-    if (updatedAt) {
-      this.updatedAt = updatedAt;
-    }
-
-    if (isActive) {
-      this.isActive = isActive;
-    }
+    Object.assign(this, {id, createdAt, updatedAt, isActive, name});
   }
 }
